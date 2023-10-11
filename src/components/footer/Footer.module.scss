@@ -1,0 +1,138 @@
+@import "../../Media.scss";
+
+.footerContainer {
+    border-top: 1px solid transparentize($color: #242424, $amount: 0.9);
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        
+        flex-direction: column;
+        gap: 1.5em;
+        margin-bottom: 2em;
+
+        @include media_md{
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .leftSection {
+            h2 {
+                font-family: 'Cookie', cursive;
+                font-size: 2rem;
+            }
+
+            ul {
+                list-style: none;
+                display: flex;
+                gap: 1.2em;
+                margin: 2em 0;
+
+                @include media_md{
+                    margin: 2em 0 0;
+                }
+
+                a {
+                    font-size: 0.90rem;
+                    opacity: 0.85;
+                }
+
+            }
+        }
+
+        .rightSection {
+            .qrContainer {
+                max-width: 450px;
+                padding: 0.5em;
+                display: flex;
+                gap: 1em;
+                align-items: center;
+                background-color: transparentize(#242424, 0.95);
+                border-radius: 15px;
+
+                img {
+                    width: min(150px, 35%);
+                }
+
+                h3 {
+                    font-weight: 600;
+                    margin-bottom: 0.7em;
+                }
+
+                p {
+                    margin-bottom: 0;
+                    font-size: 0.85rem;
+                    line-height: 1.5;
+                }
+            }
+
+
+        }
+    }
+
+
+    footer {
+
+        border-top: 1px solid transparentize(#242424, 0.9);
+        padding-top: 2em;
+
+
+
+        .content {
+            max-width: 450px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column-reverse;
+            gap: 2em;
+            justify-content: space-between;
+            
+
+            @include media_md{
+                flex-direction: row;
+                max-width: 100%;
+                align-items: center;
+                
+            }
+
+            .copyright {
+                font-size: 0.85em;
+                text-align: center;
+                font-weight: 500;
+                opacity: 0.65;
+            }
+
+            .newsLetter {
+                display: flex;
+                gap: 1em;
+                
+                @include media_md{
+                    width: 450px;
+                }
+
+                input {
+                    padding: 0.5em;
+                    font-size: 1rem;
+                    border-radius: 5px;
+                    border: 1px solid transparentize(#242424, 0.8);
+                    width: 60%;
+
+                    &::placeholder {
+                        opacity: 0.5;
+                    }
+                }
+
+                button {
+                    flex: 1;
+                    white-space: nowrap;
+                    padding: 0.5em 0.75em;
+                    background-color: var(--primary-color);
+                    font-weight: 600;
+                    color: var(--light-accent);
+                    border-radius: 5px;
+                    border: none;
+                    font-size: 0.9rem;
+                }
+            }
+        }
+    }
+}

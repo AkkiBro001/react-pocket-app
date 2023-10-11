@@ -1,0 +1,26 @@
+@import "../../Media.scss";
+
+.faqContainer{
+    header{
+        margin-bottom: 4em;
+        .subTitle{
+            font-size: 1.2rem;
+            
+        }
+    }
+
+    .faqs{
+        display: grid;
+        gap: 2em;
+        
+        @include media_md{
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include media_custom(1250px){
+            grid-template-columns: repeat(3, 3fr);
+        }
+
+        
+    }
+}

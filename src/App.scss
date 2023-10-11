@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Raleway:wght@300;400;500;600&display=swap');
+@import "./Animation.scss";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --light-accent: #eee;
+    --light-accent2: #dfdfdf;
+    --dark-accent: #242424;
+    --dark-accent2: #3d3d3d;
+    --primary-color: #00b4d1;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: var(--light-accent);
+    font-family: 'Raleway', sans-serif;
+    color: var(--dark-accent);
+    
+}
+
+h1,h2,h3,h4{
+    font-size: initial;
+    font-weight: initial;
+}
+
+a, button{
+    &:focus-within{
+        outline: 2px solid var(--primary-color);
+        border-radius: 0.25em;
+    }
+
+    
+}
+
+h1{
+    font-size: 2.5rem;
+    line-height: 3rem;
+    font-weight: 600;
+    margin-bottom: 0.65em;
+}
+
+h2{
+    font-size: 1.250rem;
+    line-height: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 0.65em;
+}
+
+p{
+    font-size: 0.95rem;
+    line-height: 1.6rem;
+    font-weight: 500;
+    margin-bottom: 1.2em;
+}
+

@@ -1,0 +1,114 @@
+@import "../../Media.scss";
+.pricingContainer{
+background-color: var(--light-accent2);
+border-bottom: 1px solid transparentize($color: #242424, $amount: 0.9);
+
+
+.pricing{
+    header{
+
+        text-align: center;
+        
+
+        .switch{
+            margin: 2em auto;
+            width: fit-content;
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            border: 1px solid var(--dark-accent2);
+    
+            
+    
+            input{
+                display: none;
+    
+                &:checked + label{
+                    color: var(--light-accent);
+                    background-color: var(--primary-color);
+                }
+    
+                
+            }
+    
+            
+    
+            label{
+                display: inline-block;
+                padding: 0.75em 1em;
+                font-weight: 500;
+                cursor: pointer;
+                
+                
+            }
+    
+        }
+    }
+
+    .cards{
+        display: flex;
+        // flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.5em;
+        
+
+        .card{
+            width: min(350px, 100%);
+            padding: 1em;
+            border-radius: 15px;
+            background-color: #fff;
+            box-shadow: 0 0 20px 0 rgba(0,0,0,0.15);
+            .price{
+                font-size: 1.2rem;
+                font-weight: 600;
+                margin-bottom: 1em;
+
+                .number{
+                    font-size: 2rem;
+                }
+
+                .text{
+                    font-size: 1rem;
+                    opacity: 0.75;
+                    font-size: 300;
+                }
+            }
+
+            button{
+                width: 100%;
+                padding: 0.75em;
+                margin-bottom: 1.5em;
+                background-color: var(--dark-accent);
+                border: none;
+                border-radius: 5px;
+                color: var(--light-accent);
+                font-weight: 500;
+                cursor: pointer;
+            }
+
+            ul{
+                list-style: none;
+                
+
+                li{
+                    display: flex;
+                    align-items: center;
+                    gap: 0.75em;
+                    padding: 0.5em 0;
+
+                    svg{
+                        color: var(--primary-color);
+                    }
+                    
+                }
+
+                li+li{
+                    border-top: 1px solid transparentize(#242424, 0.7);
+                }
+            }
+        }
+    }
+}
+
+}
